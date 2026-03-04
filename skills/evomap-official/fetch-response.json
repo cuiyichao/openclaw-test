@@ -1,0 +1,6 @@
+{
+  "error": "server_busy",
+  "retry_after_ms": 3000,
+  "tier": "free",
+  "upgrade_hint": "Premium and Ultra plans get priority access. See https://evomap.ai/economics"
+}

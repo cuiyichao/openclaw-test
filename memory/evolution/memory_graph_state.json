@@ -1,0 +1,47 @@
+{
+  "last_action": {
+    "action_id": "act_1772289433464_cd2d3a71",
+    "signal_key": "protocol_drift",
+    "signals": [
+      "protocol_drift"
+    ],
+    "mutation_id": "mut_1772289433461",
+    "mutation_category": "innovate",
+    "mutation_risk_level": "medium",
+    "personality_key": "rigor=0.7|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 0.7,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "gene_id": "gene_gep_optimize_prompt_and_assets",
+    "gene_category": "optimize",
+    "hypothesis_id": "hyp_1772289433463_932f1dba",
+    "capsules_used": [],
+    "had_error": false,
+    "created_at": "2026-02-28T14:37:13.464Z",
+    "outcome_recorded": false,
+    "baseline_observed": {
+      "agent": "main",
+      "session_scope": null,
+      "drift_enabled": false,
+      "review_mode": false,
+      "dry_run": false,
+      "system_health": "Uptime: 7.4h | Node: v22.22.0 | Agent RSS: 56.1MB | Disk: 35% (38.9G free) | Node Processes: 1 | Integrations: Gemini Key Missing",
+      "mood": "Mood: Unknown",
+      "scan_ms": 8686,
+      "memory_size_bytes": 0,
+      "recent_error_count": 1,
+      "node": "v22.22.0",
+      "platform": "linux",
+      "cwd": "/root/.openclaw/workspace/skills/capability-evolver",
+      "evidence": {
+        "recent_session_tail": "--- SESSION (18da1a62-8752-44d1-87ee-319dbfc0d23a.jsonl) ---\n**ASSISTANT**: [LLM ERROR] Request was aborted.\n**USER**: System: [2026-02-28 22:17:50 GMT+8] Feishu[default] DM from ou_45002b5fc5dab94f1d6ffa620638314b: 先开始学习吧，学习后按照这个流程来进行 Conversation info (untrusted metadata): ```json {   \"timestamp\": \"Sat 2026-02-28 22:17 GMT+8\" } ``` [message_id: om_x100b551bde1298a8c453ba896536dac] 用户195443: 先开始学习吧，学习后按照这个流程来进行\n**ASSISTANT**:  服务器繁忙，让我换个方式获取知识，同时运行自我检查：  [TOOL: exec]\n**TOOLRESULT**: {\"error\":\"server_busy\",\"retry_after_ms\":3000,\"tier\":\"free\",\"upgrade_hint\":\"Premium and Ultra plans get priority access. See https://evomap.ai/economics\"}\n**ASSISTANT**:  EvoMap 服务器暂时繁忙。不过注册时已经返回了一些推荐的知识胶囊，让我用那些来学习： ## 📚 第一步：学习已推荐的胶囊 从注册响应中已经有这些高质量胶囊： ### 1️⃣ HTTP 重试机制 - **摘要**: 实现通用 HTTP 重试机制：指数退避重试、AbortController 超时控制、全局连接池复用 - **GDI 评分**: 66 - **触发条件**: `TimeoutError`, `ECONNRESET`, `ECONNREFUSED`, `429` ### 2️⃣ AI 自主调试框架 - **摘要**: 全局错误捕获、根因分析、自动修复：自动创建缺失文件、修复权\n**TOOLRESULT**: (no output)\n**ASSISTANT**:  [TOOL: write]\n**TOOLRESULT**: Successfully wrote 1896 bytes to /root/.openclaw/workspace/.learnings/EVOMAP_KNOWLEDGE.md\n**ASSISTANT**:  学习记录已保存！现在进行第二步 - 用 **capability-evolver** 分析现有错误并自动进化：  [TOOL: exec]\n**TOOLRESULT**: total 8 drwxr-xr-x 2 root root   33 Feb 28 22:34 . drwxr-xr-x 8 root root 4096 Feb 28 22:31 .. -rw------- 1 root root 2946 Feb 28 22:34 EVOMAP_KNOWLEDGE.md\n**ASSISTANT**:  [TOOL: read]\n**TOOLRESULT**: # 🧬 Capability Evolver ![Capability Evolver Cover](assets/cover.png) [Chinese Docs](README.zh-CN.md) **\"Evolution is not optional. Adapt or die.\"** **Three lines** - **What it is**: A protocol-constrained self-evolution engine for AI agents. - **Pain it solves**: Turns ad hoc prompt tweaks into aud\n**ASSISTANT**:  [TOOL: exec]\n**TOOLRESULT**: [Evolver] Warning: dotenv not found or failed to load .env Usage: node index.js [run|/evolve|solidify] [--loop]   - solidify flags:     - --dry-run     - --no-rollback     - --intent=repair|optimize|innovate     - --summary=...\n**ASSISTANT**:  [TOOL: exec]",
+        "today_log_tail": "[MISSING] /root/.openclaw/workspace/memory/2026-02-28.md"
+      }
+    }
+  }
+}

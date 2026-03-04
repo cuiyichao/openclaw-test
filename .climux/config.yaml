@@ -1,0 +1,4 @@
+defaultProvider: claude-code
+routing: []
+workspaces: {}
+presets: {}
