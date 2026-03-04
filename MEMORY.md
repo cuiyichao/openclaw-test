@@ -82,6 +82,84 @@ B 站 Cookie: ~/.openclaw/workspace/bilibili_cookie.txt
 视频文件：~/.openclaw/workspace/videos/
 ```
 
+## 📝 成功流程记录 (2026-03-04)
+
+### auto-dev 完整流程（需求→代码→Git→ZIP 发送）
+
+```
+1. 📝 生成技术文档 → 写入 TECH_DOC.md
+2. 💻 实现代码 → index.html + css/style.css + js/login.js
+3. 🔍 代码审查 → 检查代码质量（可 spawn 子 agent）
+4. 📦 Git 提交 → git add -A && git commit -m "feat: xxx"
+5. 🚀 推送到 GitHub → git push -u origin <branch-name>
+6. 📬 发送 ZIP → 用 message 工具发送文件
+```
+
+### ✅ Feishu 文件发送方式
+
+**正确方式**（已验证成功）：
+```javascript
+message(
+  action: "send",
+  filePath: "/root/.openclaw/workspace/xxx.zip",  // 必须是工作区路径
+  target: "ou_xxx"  // 用户 ID，可省略（默认当前会话）
+)
+```
+
+**关键点**：
+1. 文件必须放在 `/root/.openclaw/workspace/` 目录下
+2. 使用 `filePath` 参数（不是 `path` 或 `buffer`）
+3. 先用 `cp` 把文件复制到工作区
+4. Feishu 会自动处理文件发送
+
+**错误方式**（不要用）：
+- ❌ `path` 参数 - 可能只发送路径字符串
+- ❌ `buffer` 参数 - 需要 message 参数配合，容易失败
+- ❌ 绝对路径 `/tmp/xxx` - Feishu 可能无法访问
+
+### ✅ Git 推送流程
+
+```bash
+# 1. 初始化项目 git
+cd /root/.openclaw/workspace/projects/<project-name>
+git init
+git config user.email "openclaw@local"
+git config user.name "OpenClaw"
+
+# 2. 提交代码
+git add -A
+git commit -m "feat: 项目描述"
+
+# 3. 推送到 GitHub（使用 token 认证）
+git remote add origin https://<TOKEN>@github.com/<user>/<repo>.git
+git push -u origin <branch-name>
+```
+
+**GitHub Token**: 已配置在 git credential 中
+**仓库地址**: https://github.com/cuiyichao/openclaw-test
+
+### ✅ 项目打包方式
+
+```bash
+# 打包项目（排除.git 目录）
+cd /root/.openclaw/workspace/projects
+zip -r /tmp/<project-name>-project.zip <project-name>/ -x "*.git*"
+
+# 复制到工作区（Feishu 可访问）
+cp /tmp/<project-name>-project.zip /root/.openclaw/workspace/
+
+# 发送
+message(action="send", filePath="/root/.openclaw/workspace/<project-name>-project.zip")
+```
+
+### 📋 测试项目示例
+
+**登录页面项目** (login-page)：
+- 技术文档：TECH_DOC.md
+- 文件：index.html, css/style.css, js/login.js
+- GitHub: https://github.com/cuiyichao/openclaw-test/tree/login-page
+- 测试账号：test@example.com / 123456
+
 ---
 
-_最后更新：2026-03-01_
+_最后更新：2026-03-04_
