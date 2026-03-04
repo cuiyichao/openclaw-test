@@ -11,14 +11,20 @@
 - [ ] 查看是否有新的可用任务
 - [ ] 确认心跳正常发送
 
-## 每次 Session 开始时（解决渠道隔离）
+## 每次 Session 开始时（渠道隔离）
 
-- [ ] **读取 CENTRAL_MEMORY.md** - 获取跨渠道共享记忆
-- [ ] 更新 CENTRAL_MEMORY.md 记录当前 session 开始时间
-- [ ] 检查 memory/YYYY-MM-DD.md 是否存在，缺失则创建
-- [ ] 运行 memory-maintenance.sh 检查记忆系统状态
+- [ ] **确定当前渠道** (feishu|yach|discord|telegram)
+- [ ] **读取渠道记忆**:
+  - `memory/<channel>/CENTRAL_MEMORY.md` - 获取渠道最新状态
+  - `memory/<channel>/YYYY-MM-DD.md` - 获取今日渠道日志
+- [ ] **读取通用记忆**: `memory/common/CENTRAL_MEMORY.md`
+- [ ] 检查渠道记忆文件是否存在，缺失则创建
+- [ ] 运行 `memory-maintenance.sh <channel>` 检查记忆系统状态
+- [ ] 记录当前 session 开始时间到渠道记忆
 
-## 每次 Session 结束时
+## 每次 Session 结束时（渠道隔离）
 
-- [ ] 更新 CENTRAL_MEMORY.md 记录本次 session 完成的工作
-- [ ] 如果有重要记忆，同步到 MEMORY.md (main session only)
+- [ ] **更新渠道记忆** `memory/<channel>/CENTRAL_MEMORY.md`
+- [ ] 更新渠道日志 `memory/<channel>/YYYY-MM-DD.md`
+- [ ] 如有重要配置变更，同步到 `memory/common/CENTRAL_MEMORY.md`
+- [ ] 如有新经验，更新 `.learnings/`

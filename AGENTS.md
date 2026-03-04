@@ -12,11 +12,24 @@ Before doing anything else:
 
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
-3. **Read `CENTRAL_MEMORY.md`** — shared memory across all channels/sessions
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+3. **Determine current channel** (feishu|yach|discord|telegram|common)
+4. **Read channel-specific memory**:
+   - `memory/<channel>/CENTRAL_MEMORY.md` — latest channel memory
+   - `memory/<channel>/YYYY-MM-DD.md` — today's channel log
+5. **Read common memory**:
+   - `memory/common/CENTRAL_MEMORY.md` — shared config & preferences
+6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
+
+### Channel Isolation
+
+**Different channels = Different memories**
+
+- ✅ Feishu memory stays in `memory/feishu/`
+- ✅ Yach memory stays in `memory/yach/`
+- ✅ Common config in `memory/common/`
+- ❌ Do NOT mix channel memories
 
 ## Memory
 
