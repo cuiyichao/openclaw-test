@@ -117,5 +117,15 @@
     },
     "active_task_id": null,
     "active_task_title": null
+  },
+  "last_solidify": {
+    "run_id": "run_1772289433465",
+    "at": "2026-03-04T04:36:23.148Z",
+    "event_id": "evt_1772598983148",
+    "capsule_id": null,
+    "outcome": {
+      "status": "failed",
+      "score": 0.2
+    }
   }
 }

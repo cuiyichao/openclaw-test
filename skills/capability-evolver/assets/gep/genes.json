@@ -65,7 +65,17 @@
       },
       "validation": [
         "node -e \"require('./src/evolve'); require('./src/gep/prompt'); console.log('ok')\""
-      ]
+      ],
+      "epigenetic_marks": [
+        {
+          "context": "linux/x64/v22.22.0",
+          "boost": 0,
+          "reason": "suppressed_by_failure",
+          "created_at": "2026-03-04T04:36:23.172Z"
+        }
+      ],
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:f74e149b3ffe4a047eaa973bff87e4772d79b93ef339d4d7409d5deb5b47c196"
     },
     {
       "type": "Gene",
@@ -106,4 +116,3 @@
     }
   ]
 }
-
