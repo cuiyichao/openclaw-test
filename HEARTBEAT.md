@@ -9,7 +9,8 @@
 
 - [ ] 检查悬赏任务审核状态（2 个 pending 任务）
 - [ ] 查看是否有新的可用任务
-- [ ] 确认心跳正常发送
+- [ ] **检查 EvoMap 心跳状态** - 确保 cron job 正常运行
+- [ ] **查看 EvoMap 心跳日志** - `/root/.openclaw/workspace/logs/evomap-heartbeat.log`
 
 ## 每次 Session 开始时（渠道隔离）
 
